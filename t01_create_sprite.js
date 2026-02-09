@@ -1,7 +1,7 @@
 /*******************************************************/
 // P5.play: t01_create_sprite
 // Create a sprite
-/// Written by ???
+/// Written by gauri
 /*******************************************************/
 	
 /*******************************************************/
@@ -9,6 +9,11 @@
 /*******************************************************/
 function setup() {
 	console.log("setup: ");
+	cnv = new Canvas(100, 100);
+	rectangle = new Sprite(30, 30, 20, 40);
+	rectangle.color = 'pink';
+	circle = new Sprite(40, 50, 3.5);
+	circle.color = 'blue';
 
 }
 	
@@ -16,6 +21,7 @@ function setup() {
 // draw()
 /*******************************************************/
 function draw() {
+	background('white');
 	
 }
 
