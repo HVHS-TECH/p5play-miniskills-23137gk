@@ -9,14 +9,18 @@
 /*******************************************************/
 function setup() {
 	console.log("setup: ");
-
+	cnv = new Canvas(windowWidth, windowHeight);
+	rectangle = new Sprite(100, 100, 50, 80, '50');
+	rectangle.color = 'purple';
+	rectangle.rotationSpeed = 2;
+	rectangle.vel.y = 2;
 }
 	
 /*******************************************************/
 // draw()
 /*******************************************************/
 function draw() {
-	
+	background('white');
 }
 
 /*******************************************************/
