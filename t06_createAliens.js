@@ -24,16 +24,19 @@ function setup() {
 	ball_1,bounciness = 100;
 	ball_1.friction = 0;
 	ball_1.drag = 0;
-
-	// for (i = 0; i < alien; i++) {
-	//	alien = new Sprite(300, 300, 450, 450);
-	//	alien.vel.x = 3;
-	//	alien.vel.y = 4;
-	//	alien.bounciness = 1;
-	//	alien.friction = 0;
-	// }
+	alien();
 }
-	
+
+function alien() {
+	for (i = 0; i < 20; i++) {
+		alien = new Sprite(8,10);
+		alien.vel.x = 3;
+		alien.vel.y = 4;
+		alien.bounciness = 1;
+		alien.friction = 0;
+	}
+}
+
 /*******************************************************/
 // draw()
 /*******************************************************/
