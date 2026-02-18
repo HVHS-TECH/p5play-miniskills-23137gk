@@ -21,8 +21,8 @@ function setup() {
 	wallBot.color = 'purple';
 	ball_1 = new Sprite(width/2, height/2, 50, 'd');
 	ball_1.color = 'cyan';
-	ball_1.vel.y = 50;
-	ball_1,bounciness = 100;
+	ball_1.vel.y = 2;
+	ball_1.bounciness = 1;
 	ball_1.friction = 0;
 	ball_1.drag = 0;
 	alien();
@@ -30,18 +30,29 @@ function setup() {
 
 function alien() {
 	alienGroup = new Group();
-	for (i = 0; i < 20; i++) {
-		alien = new Sprite(8,10);
+	for (i = 0; i < 40; i++) {
+		alien = new Sprite(5,5);
 		alien.vel.x = 3;
 		alien.vel.y = 4;
 		alien.bounciness = 1;
 		alien.friction = 0;
 		alienGroup.add(alien);
-		// if any alien in alienGroup collides with ball_1, call func2Call
-		alienGroup.collides(ball_1, func2Call);
+	}
+
+
+	// Register a callback:
+	// if any alien in alienGroup collides with ball_1, call func2Call
+	alienGroup.collides(ball_1, func2Call);
+
+
+	function func2Call(_ssss, _ball_1) {
+		// Delete the alien which was hit
+		_ssss.remove();
 	}
 }
-	
+
+
+
 /*******************************************************/
 // draw()
 /*******************************************************/
