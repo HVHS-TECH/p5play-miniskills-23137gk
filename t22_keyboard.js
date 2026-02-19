@@ -14,15 +14,11 @@ function setup() {
 	rectangle = new Sprite(950, 300, 90, 80, 'd');
 	rectangle.color = 'blue';
 	rectangle.rotationSpeed = 2;
-}
-	
-/*******************************************************/
-// draw()
-/*******************************************************/
-function draw() {
-	background('white');
-	if (kb.pressing('left')) {
+
+
+		if (kb.pressing('left')) {
     // Set sprite's velocity to the left
+			rectangle.vel.x = 3;
 	}
 	else if (kb.pressing ('right')) {
 		// Set sprite's velocity to the right
@@ -33,6 +29,16 @@ function draw() {
 	else if (kb.released('right')) {
 		// Set sprite's velocity to zero
 	}
+
+
+}
+	
+/*******************************************************/
+// draw()
+/*******************************************************/
+function draw() {
+	background('white');
+
 	rectangle.moveTowards(mouseX, mouseY, 1);
 		if (mouse.presses()) {
 		rectangle.moveTo(100, 200, 5);

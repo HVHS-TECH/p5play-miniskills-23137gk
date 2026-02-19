@@ -1,7 +1,7 @@
 /*******************************************************/
-// P5.play: t21_head2Mouse
-// Move sprite towards the mouse' position
-// Written by ???
+// P5.play: t23_text
+// Extension tasks
+// Written by ??
 /*******************************************************/
 	
 /*******************************************************/
@@ -9,24 +9,18 @@
 /*******************************************************/
 function setup() {
 	console.log("setup: ");
-	cnv = new Canvas(windowWidth, windowHeight);
-	world.gravity.y = 10;
-	rectangle = new Sprite(950, 300, 90, 80, 'd');
-	rectangle.color = 'blue';
-	rectangle.rotationSpeed = 2;
+	cnv = new Canvas(windowWidth, windowHeight); 
 }
 	
 /*******************************************************/
 // draw()
 /*******************************************************/
 function draw() {
-	background('white'); 
-	rectangle.moveTowards(mouseX, mouseY, 1);
-		if (mouse.presses()) {
-		rectangle.moveTo(100, 200, 5);
-		}
-	}
-
+    background('white');
+	text("Hello World", 900, 500);
+    var name = "gauri";
+    text("Hello "+name, 980, 500);
+}
 
 /*******************************************************/
 //  END OF APP
